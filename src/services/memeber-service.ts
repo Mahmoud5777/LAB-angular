@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { MemberModel } from '../Models/MemberModel';
+
+@Injectable({
+  providedIn: 'root',//injectable dans toute la route 
+})
+//le decorateur qui declare que le service accepte d etre injecter dans un composant ou un autre service 
+export class MemeberService {
+  constructor(private http: HttpClient) { }
+  
+  //les fonctions du service qui generent des requetes http vers le backend pour recuperer les membres de la base de données
+  getAllMembers() {
+    // Implémentation pour récupérer tous les membres
+    return this.http.get<MemberModel[]>('http://localhost:3000/members');
+}
+
+}
