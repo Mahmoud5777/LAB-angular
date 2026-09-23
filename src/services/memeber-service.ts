@@ -13,6 +13,16 @@ export class MemeberService {
   getAllMembers() {
     // Implémentation pour récupérer tous les membres
     return this.http.get<MemberModel[]>('http://localhost:3000/members');
-}
+  }
+
+  addMember(member: MemberModel) {
+    // Implémentation pour ajouter un membre
+    return this.http.post<void>('http://localhost:3000/members', member);
+  }
+
+  deleteMember(id: String) {
+    // Implémentation pour supprimer un membre
+    return this.http.delete<void>(`http://localhost:3000/members/${id}`);
+  }
 
 }
