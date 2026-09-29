@@ -1,0 +1,143 @@
+/* ===== Layout général ===== */
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+mat-sidenav-container {
+  min-height: 100vh;
+  background: transparent;
+  --mat-sidenav-content-background-color: transparent;
+  --mat-sidenav-container-background-color: transparent;
+}
+
+mat-sidenav-content {
+  background: transparent;
+}
+
+/* ===== Barre du haut ===== */
+mat-sidenav-content > mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, var(--primary) 0%, #7c3aed 100%);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(79, 70, 229, 0.35);
+  --mat-toolbar-container-background-color: transparent;
+  --mat-toolbar-container-text-color: #fff;
+}
+
+/* Boutons de la barre (menu + utilisateur) */
+.toolbar-button {
+  color: #fff;
+  --mat-icon-button-icon-color: #fff;
+  --mat-button-text-label-text-color: #fff;
+  --mat-button-text-state-layer-color: #fff;
+  --mat-icon-button-state-layer-color: #fff;
+}
+
+/* Bouton menu : icône + texte "Lab" en forme de pilule */
+button[aria-label="Toggle sidenav"] {
+  width: auto !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.2s;
+}
+button[aria-label="Toggle sidenav"]:hover {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: none;
+}
+button[aria-label="Toggle sidenav"] mat-icon {
+  margin-right: 8px;
+}
+
+/* Bouton utilisateur : poussé à droite (remplace margin-left: 85% en ligne) */
+button[mat-button].toolbar-button {
+  margin-left: auto !important;
+  margin-right: 8px !important;
+  border-radius: 999px;
+}
+button[mat-button].toolbar-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: none;
+}
+
+/* Image avatar vide : on la masque */
+.avatar {
+  display: none;
+}
+
+.toolbar-separator {
+  display: none;
+}
+
+/* ===== Menu latéral ===== */
+mat-sidenav {
+  border-radius: 0 22px 22px 0;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 8px 0 30px rgba(31, 41, 55, 0.15);
+  border-right: none;
+}
+
+mat-sidenav mat-toolbar {
+  height: 72px;
+  background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  --mat-toolbar-container-background-color: transparent;
+  --mat-toolbar-container-text-color: #fff;
+}
+
+mat-sidenav mat-toolbar mat-icon {
+  margin-right: 10px;
+  font-size: 28px;
+  height: 28px;
+  width: 28px;
+}
+
+mat-nav-list {
+  padding: 14px 0;
+  --mat-list-list-item-label-text-color: var(--text);
+  --mat-list-list-item-hover-label-text-color: var(--primary);
+}
+
+mat-nav-list a {
+  margin: 4px 12px;
+  border-radius: 12px;
+  color: var(--text);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+mat-nav-list a mat-icon {
+  margin-right: 14px;
+  vertical-align: middle;
+  color: var(--primary);
+  transition: transform 0.2s;
+}
+
+mat-nav-list a:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+mat-nav-list a:hover mat-icon {
+  transform: scale(1.15);
+}
+
+/* ===== Zone de contenu ===== */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+.content br {
+  display: none;
+}

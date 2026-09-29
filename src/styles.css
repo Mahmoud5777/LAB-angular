@@ -26,8 +26,8 @@ body {
   color: var(--text);
 }
 
-/* Bouton générique réutilisable */
-button {
+/* Bouton générique réutilisable (les boutons Angular Material gardent leur style) */
+button:not([class*="mat-"]) {
   font-family: inherit;
   font-size: 15px;
   cursor: pointer;
@@ -39,8 +39,20 @@ button {
   color: #fff;
   transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
 }
-button:hover { background: var(--primary-dark); box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35); }
-button:active { transform: translateY(1px); }
+button:not([class*="mat-"]):hover { background: var(--primary-dark); box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35); }
+button:not([class*="mat-"]):active { transform: translateY(1px); }
 
 /* Boîte de dialogue Material : coins arrondis */
 .mat-mdc-dialog-surface { border-radius: var(--radius) !important; }
+
+/* Menu déroulant utilisateur (affiché dans un overlay, donc style global) */
+.mat-mdc-menu-panel {
+  border-radius: 14px !important;
+  box-shadow: var(--shadow) !important;
+}
+.mat-mdc-menu-item .mat-icon {
+  color: var(--primary);
+}
+.mat-mdc-menu-item:hover {
+  background: var(--primary-soft) !important;
+}
