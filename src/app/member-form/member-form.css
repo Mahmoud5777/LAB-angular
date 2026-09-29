@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 460px;
+  background: var(--card);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--primary);
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-icon {
+  color: var(--primary);
+}
+
+form br { display: none; }
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px;
+  font-size: 16px;
+  text-transform: capitalize;
+}

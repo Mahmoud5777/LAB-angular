@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  padding: 8px;
+}
+
+h2 {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+mat-dialog-content {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+mat-dialog-actions {
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+/* Cancel = discret, Delete = rouge */
+button {
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  box-shadow: none;
+}
+button:hover { background: var(--border); box-shadow: none; }
+
+button[ng-reflect-dialog-result="true"],
+button:last-child {
+  background: var(--danger);
+  color: #fff;
+}
+button:last-child:hover { background: #dc2626; box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35); }

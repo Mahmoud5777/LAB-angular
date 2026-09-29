@@ -24,5 +24,16 @@ export class MemeberService {
     // Implémentation pour supprimer un membre
     return this.http.delete<void>(`http://localhost:3000/members/${id}`);
   }
+  getMemberById(id: String) {
+    // Implémentation pour récupérer un membre par son ID
+    return this.http.get<MemberModel>(`http://localhost:3000/members/${id}`);
+  }
+  updateMember(id: String, member: MemberModel) {
+    // Implémentation pour mettre à jour un membre
+    return this.http.put<void>(`http://localhost:3000/members/${id}`, member);
+  }
+  updateMember2(id: String, newName: String) {
+    return this.http.patch<void>(`http://localhost:3000/members/${id}`, { name: newName });
+  }
 
 }

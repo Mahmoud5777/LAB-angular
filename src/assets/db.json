@@ -1,18 +1,11 @@
 {
   "members": [
     {
-      "id": "1",
-      "cin": "12345678",
-      "name": "John Doe",
-      "type": "Admin",
-      "created": "2023-01-01"
-    },
-    {
-      "id": "2",
-      "cin": "87654321",
+      "cin": "87654322",
       "name": "Jane Smith",
       "type": "User",
-      "created": "2023-02-01"
+      "created": "2023-02-01",
+      "id": "2"
     },
     {
       "id": "3",
@@ -20,7 +13,20 @@
       "name": "Alice Johnson",
       "type": "User",
       "created": "2023-03-01"
+    },
+    {
+      "id": "4",
+      "cin": "55667788",
+      "name": "Bob Brown",
+      "type": "Admin",
+      "created": "2023-04-01"
+    },
+    {
+      "cin": "99887777",
+      "name": "Ahmed ",
+      "type": "User",
+      "created": "2023-05-01",
+      "id": "5"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

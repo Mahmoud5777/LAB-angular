@@ -1,7 +1,86 @@
-table {
-  width: 100%;
+:host {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Bouton "create" */
+:host > button {
+  margin-bottom: 20px;
+  padding: 12px 26px;
+  text-transform: capitalize;
+  border-radius: 999px;
+}
+
+table {
+  width: 100%;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th.mat-mdc-header-cell,
+th {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+td {
+  padding: 0 20px;
+  color: var(--text);
+}
+
+tr.mat-mdc-row:nth-child(even) { background: #f9fafb; }
+tr.mat-mdc-row { transition: background 0.15s; }
+tr.mat-mdc-row:hover { background: var(--primary-soft); }
+
+/* Icônes */
 mat-icon {
   cursor: pointer;
+  color: var(--muted);
+  vertical-align: middle;
+  transition: color 0.2s, transform 0.15s;
+}
+
+/* ===== Boutons d'actions (edit + delete) ===== */
+td button {
+  background: transparent;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: none;
+  margin-right: 6px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+td button:hover {
+  box-shadow: none;
+  transform: scale(1.1);
+}
+
+/* EDIT : bleu */
+td button:first-child mat-icon {
+  color: #2563eb;
+}
+td button:first-child:hover {
+  background: #dbeafe;
+}
+td button:first-child:hover mat-icon {
+  color: #1d4ed8;
+}
+
+/* DELETE : rouge */
+td button:last-child mat-icon {
+  color: #ef4444;
+}
+td button:last-child:hover {
+  background: #fee2e2;
+}
+td button:last-child:hover mat-icon {
+  color: #dc2626;
 }
