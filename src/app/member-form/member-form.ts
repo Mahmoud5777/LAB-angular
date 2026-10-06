@@ -47,11 +47,11 @@ export class MemberForm implements OnInit {
   onSubmit() {
     if (this.currentID) {
       this.memberService.updateMember(this.currentID, this.memberForm.value).subscribe(() => {
-        this.router.navigate(['']);
+        this.router.navigate(['/members']);
       });
     } else {
       this.memberService.addMember(this.memberForm.value).subscribe(() => {
-        this.router.navigate(['']);
+        this.router.navigate(['/members']);
       });
     }
   }

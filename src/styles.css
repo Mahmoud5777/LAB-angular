@@ -1,11 +1,25 @@
 /* ===== Styles globaux ===== */
 :root {
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
-  --primary-soft: #eef2ff;
-  --danger: #ef4444;
+  /* ===== THEME BORDEAUX : changez seulement ces variables ===== */
+  --primary: #881337;
+  --primary-dark: #6b0f2a;
+  --primary-soft: #fdf2f4;
+  --primary-2: #be123c;          /* fin des dégradés (barre, menu) */
+  --primary-rgb: 136, 19, 55;    /* pour les ombres colorées */
+
+  --info: #2563eb;               /* bouton edit */
+  --info-dark: #1d4ed8;
+  --info-soft: #dbeafe;
+
+  --danger: #ef4444;             /* bouton delete */
+  --danger-dark: #dc2626;
   --danger-soft: #fee2e2;
-  --bg: #f4f6fb;
+  --danger-rgb: 239, 68, 68;
+
+  --bg: #faf5f6;
+  --bg-start: #fdf2f4;
+  --bg-end: #fff7f5;
+  --row-alt: #fbf6f7;
   --card: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
@@ -21,7 +35,7 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(135deg, #eef2ff 0%, var(--bg) 50%, #fdf2f8 100%);
+  background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg) 50%, var(--bg-end) 100%);
   background-attachment: fixed;
   color: var(--text);
 }
@@ -39,7 +53,7 @@ button:not([class*="mat-"]) {
   color: #fff;
   transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
 }
-button:not([class*="mat-"]):hover { background: var(--primary-dark); box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35); }
+button:not([class*="mat-"]):hover { background: var(--primary-dark); box-shadow: 0 6px 16px rgba(var(--primary-rgb), 0.35); }
 button:not([class*="mat-"]):active { transform: translateY(1px); }
 
 /* Boîte de dialogue Material : coins arrondis */

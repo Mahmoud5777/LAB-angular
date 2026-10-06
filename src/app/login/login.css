@@ -1,0 +1,48 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 16px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--card);
+  padding: 36px 32px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--primary);
+}
+
+/* Titre ajouté en CSS (pas besoin de modifier le HTML) */
+form::before {
+  content: "Connexion";
+  display: block;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+input {
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 13px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+}

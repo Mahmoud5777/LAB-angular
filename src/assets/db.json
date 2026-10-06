@@ -20,13 +20,7 @@
       "name": "Bob Brown",
       "type": "Admin",
       "created": "2023-04-01"
-    },
-    {
-      "cin": "99887777",
-      "name": "Ahmed ",
-      "type": "User",
-      "created": "2023-05-01",
-      "id": "5"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

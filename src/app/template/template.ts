@@ -5,7 +5,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth-service';
 
 
 @Component({
@@ -16,4 +17,16 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class Template {
 
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
+
+  logout(): void {
+    this.authService.signOut().then(() => {
+      this.router.navigate(['/']);
+    }).catch((error: unknown) => {
+      console.error('Logout failed', error);
+    });
+  }
 }

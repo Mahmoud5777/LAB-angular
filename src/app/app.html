@@ -1,3 +1,5 @@
 <!--appel a travers le fichier de routage-->
 <router-outlet></router-outlet>
-<app-template></app-template>
+
+<app-template *ngIf="!b"></app-template>
+<app-login *ngIf="b"></app-login>
