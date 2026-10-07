@@ -3,7 +3,7 @@
     {
       "cin": "87654322",
       "name": "Jane Smith",
-      "type": "User",
+      "type": "Student",
       "created": "2023-02-01",
       "id": "2"
     },
@@ -11,15 +11,29 @@
       "id": "3",
       "cin": "11223344",
       "name": "Alice Johnson",
-      "type": "User",
+      "type": "Student",
       "created": "2023-03-01"
     },
     {
       "id": "4",
       "cin": "55667788",
       "name": "Bob Brown",
-      "type": "Admin",
+      "type": "teacher",
       "created": "2023-04-01"
+    },
+    {
+      "id": "5",
+      "cin": "99887766",
+      "name": "Charlie Davis",
+      "type": "Student",
+      "created": "2023-05-01"
+    },
+    {
+      "id": "6",
+      "cin": "22334455",
+      "name": "Eve Wilson",
+      "type": "teacher",
+      "created": "2023-06-01"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
